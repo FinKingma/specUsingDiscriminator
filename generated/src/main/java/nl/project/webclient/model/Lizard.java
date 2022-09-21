@@ -1,5 +1,5 @@
 /*
- * MS Project API
+ * MS Pet API
  * De API for testing the discriminator in openapi 6
  *
  * The version of the OpenAPI document: 1.0.0
@@ -23,7 +23,6 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * Lizard
@@ -32,7 +31,8 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Lizard.JSON_PROPERTY_LOVES_ROCKS,
   Lizard.JSON_PROPERTY_PET_TYPE
 })
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:34:09.177841100+02:00[Europe/Prague]")
+@JsonTypeName("Lizard")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:59:54.243074600+02:00[Europe/Prague]")
 public class Lizard {
   public static final String JSON_PROPERTY_LOVES_ROCKS = "lovesRocks";
   private Boolean lovesRocks;
@@ -40,8 +40,6 @@ public class Lizard {
   public static final String JSON_PROPERTY_PET_TYPE = "petType";
   private String petType;
 
-  public Lizard() {
-  }
 
   public Lizard lovesRocks(Boolean lovesRocks) {
     
@@ -63,8 +61,6 @@ public class Lizard {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOVES_ROCKS)
-  @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
   public void setLovesRocks(Boolean lovesRocks) {
     this.lovesRocks = lovesRocks;
   }
@@ -80,7 +76,6 @@ public class Lizard {
    * Get petType
    * @return petType
   **/
-  @javax.annotation.Nonnull
   @ApiModelProperty(required = true, value = "")
   @JsonProperty(JSON_PROPERTY_PET_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
@@ -90,8 +85,6 @@ public class Lizard {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PET_TYPE)
-  @JsonInclude(value = JsonInclude.Include.ALWAYS)
   public void setPetType(String petType) {
     this.petType = petType;
   }
@@ -114,6 +107,7 @@ public class Lizard {
   public int hashCode() {
     return Objects.hash(lovesRocks, petType);
   }
+
 
   @Override
   public String toString() {

@@ -1,13 +1,15 @@
 
 
-# Dog
+# PetResponse
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**bark** | **String** |  |  [optional]
+**catName** | **String** |  |  [optional]
 **petType** | **String** |  | 
+**bark** | **String** |  |  [optional]
+**lovesRocks** | **Boolean** |  |  [optional]
 
 
 

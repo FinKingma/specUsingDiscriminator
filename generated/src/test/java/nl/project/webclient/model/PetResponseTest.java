@@ -1,5 +1,5 @@
 /*
- * MS Project API
+ * MS Pet API
  * De API for testing the discriminator in openapi 6
  *
  * The version of the OpenAPI document: 1.0.0
@@ -13,7 +13,6 @@
 
 package nl.project.webclient.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
@@ -32,17 +31,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for CreateProjectsRequest
+ * Model tests for PetResponse
  */
-public class CreateProjectsRequestTest {
-    private final CreateProjectsRequest model = new CreateProjectsRequest();
+public class PetResponseTest {
+    private final PetResponse model = new PetResponse();
 
     /**
-     * Model tests for CreateProjectsRequest
+     * Model tests for PetResponse
      */
     @Test
-    public void testCreateProjectsRequest() {
-        // TODO: test CreateProjectsRequest
+    public void testPetResponse() {
+        // TODO: test PetResponse
     }
 
     /**

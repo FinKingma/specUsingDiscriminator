@@ -1,30 +1,36 @@
 openapi: 3.0.3
 info:
   description: De API for testing the discriminator in openapi 6
-  title: MS Project API
+  title: MS Pet API
   version: 1.0.0
 servers:
 - url: /
 paths:
   /api/projects:
-    post:
-      operationId: createProjects
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/createProjects_request'
-        required: true
+    get:
+      operationId: getPets
       responses:
-        "201":
-          description: OK
-      summary: Create a project
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PetResponse'
+                type: array
+          description: Succes respons
+      summary: get a pet
       tags:
-      - projects
-      x-content-type: application/json
+      - pets
       x-accepts: application/json
 components:
   schemas:
+    PetResponse:
+      discriminator:
+        propertyName: petType
+      oneOf:
+      - $ref: '#/components/schemas/Cat'
+      - $ref: '#/components/schemas/Dog'
+      - $ref: '#/components/schemas/Lizard'
     Cat:
       properties:
         catName:
@@ -51,13 +57,5 @@ components:
           type: string
       required:
       - petType
-      type: object
-    createProjects_request:
-      discriminator:
-        propertyName: petType
-      oneOf:
-      - $ref: '#/components/schemas/Cat'
-      - $ref: '#/components/schemas/Dog'
-      - $ref: '#/components/schemas/Lizard'
       type: object
 

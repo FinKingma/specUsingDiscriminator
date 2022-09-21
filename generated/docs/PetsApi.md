@@ -1,18 +1,18 @@
-# ProjectsApi
+# PetsApi
 
 All URIs are relative to *http://localhost*
 
-| Method | HTTP request | Description |
-|------------- | ------------- | -------------|
-| [**createProjects**](ProjectsApi.md#createProjects) | **POST** /api/projects | Create a project |
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getPets**](PetsApi.md#getPets) | **GET** /api/projects | get a pet
 
 
 
-## createProjects
+## getPets
 
-> createProjects(createProjectsRequest)
+> List&lt;PetResponse&gt; getPets()
 
-Create a project
+get a pet
 
 ### Example
 
@@ -22,19 +22,19 @@ import nl.project.webclient.ApiClient;
 import nl.project.webclient.ApiException;
 import nl.project.webclient.Configuration;
 import nl.project.webclient.models.*;
-import nl.project.webclient.api.ProjectsApi;
+import nl.project.webclient.api.PetsApi;
 
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
 
-        ProjectsApi apiInstance = new ProjectsApi(defaultClient);
-        CreateProjectsRequest createProjectsRequest = new CreateProjectsRequest(); // CreateProjectsRequest | 
+        PetsApi apiInstance = new PetsApi(defaultClient);
         try {
-            apiInstance.createProjects(createProjectsRequest);
+            List<PetResponse> result = apiInstance.getPets();
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ProjectsApi#createProjects");
+            System.err.println("Exception when calling PetsApi#getPets");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -46,14 +46,11 @@ public class Example {
 
 ### Parameters
 
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **createProjectsRequest** | [**CreateProjectsRequest**](CreateProjectsRequest.md)|  | |
+This endpoint does not need any parameter.
 
 ### Return type
 
-null (empty response body)
+[**List&lt;PetResponse&gt;**](PetResponse.md)
 
 ### Authorization
 
@@ -61,12 +58,11 @@ No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
-- **Accept**: Not defined
-
+- **Content-Type**: Not defined
+- **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | OK |  -  |
+| **200** | Succes respons |  -  |
 

@@ -1,5 +1,5 @@
 /*
- * MS Project API
+ * MS Pet API
  * De API for testing the discriminator in openapi 6
  *
  * The version of the OpenAPI document: 1.0.0

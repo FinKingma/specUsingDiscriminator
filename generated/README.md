@@ -1,10 +1,10 @@
 # openapi-java-client
 
-MS Project API
+MS Pet API
 
 - API version: 1.0.0
 
-- Build date: 2022-09-21T09:34:09.177841100+02:00[Europe/Prague]
+- Build date: 2022-09-21T09:59:54.243074600+02:00[Europe/Prague]
 
 De API for testing the discriminator in openapi 6
 
@@ -52,14 +52,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-  repositories {
-    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
-  }
-
-  dependencies {
-     implementation "nl.project.webclient:openapi-java-client:1.0.0"
-  }
+compile "nl.project.webclient:openapi-java-client:1.0.0"
 ```
 
 ### Others
@@ -84,20 +77,20 @@ Please follow the [installation](#installation) instruction and execute the foll
 import nl.project.webclient.*;
 import nl.project.webclient.auth.*;
 import nl.project.webclient.model.*;
-import nl.project.webclient.api.ProjectsApi;
+import nl.project.webclient.api.PetsApi;
 
-public class ProjectsApiExample {
+public class PetsApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
         defaultClient.setBasePath("http://localhost");
         
-        ProjectsApi apiInstance = new ProjectsApi(defaultClient);
-        CreateProjectsRequest createProjectsRequest = new CreateProjectsRequest(); // CreateProjectsRequest | 
+        PetsApi apiInstance = new PetsApi(defaultClient);
         try {
-            apiInstance.createProjects(createProjectsRequest);
+            List<PetResponse> result = apiInstance.getPets();
+            System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling ProjectsApi#createProjects");
+            System.err.println("Exception when calling PetsApi#getPets");
             System.err.println("Status code: " + e.getCode());
             System.err.println("Reason: " + e.getResponseBody());
             System.err.println("Response headers: " + e.getResponseHeaders());
@@ -114,15 +107,15 @@ All URIs are relative to *http://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ProjectsApi* | [**createProjects**](docs/ProjectsApi.md#createProjects) | **POST** /api/projects | Create a project
+*PetsApi* | [**getPets**](docs/PetsApi.md#getPets) | **GET** /api/projects | get a pet
 
 
 ## Documentation for Models
 
  - [Cat](docs/Cat.md)
- - [CreateProjectsRequest](docs/CreateProjectsRequest.md)
  - [Dog](docs/Dog.md)
  - [Lizard](docs/Lizard.md)
+ - [PetResponse](docs/PetResponse.md)
 
 
 ## Documentation for Authorization

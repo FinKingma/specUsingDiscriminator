@@ -1,5 +1,5 @@
 /*
- * MS Project API
+ * MS Pet API
  * De API for testing the discriminator in openapi 6
  *
  * The version of the OpenAPI document: 1.0.0
@@ -13,7 +13,7 @@
 
 package nl.project.webclient.api;
 
-import nl.project.webclient.model.CreateProjectsRequest;
+import nl.project.webclient.model.PetResponse;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -21,26 +21,24 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
- * API tests for ProjectsApi
+ * API tests for PetsApi
  */
 @Ignore
-public class ProjectsApiTest {
+public class PetsApiTest {
 
-    private final ProjectsApi api = new ProjectsApi();
+    private final PetsApi api = new PetsApi();
 
     
     /**
-     * Create a project
+     * get a pet
      *
      * 
      */
     @Test
-    public void createProjectsTest()  {
-        CreateProjectsRequest createProjectsRequest = null;
-        api.createProjects(createProjectsRequest).block();
+    public void getPetsTest()  {
+        List<PetResponse> response = api.getPets().collectList().block();
 
         // TODO: test validations
     }

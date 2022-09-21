@@ -1,5 +1,5 @@
 /*
- * MS Project API
+ * MS Pet API
  * De API for testing the discriminator in openapi 6
  *
  * The version of the OpenAPI document: 1.0.0
@@ -16,7 +16,7 @@ package nl.project.webclient;
 import java.util.Collection;
 import java.util.Iterator;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:34:09.177841100+02:00[Europe/Prague]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:59:54.243074600+02:00[Europe/Prague]")
 public class StringUtil {
   /**
    * Check if the given array contains the given value (with case-insensitive comparison).
