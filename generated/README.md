@@ -4,7 +4,7 @@ MS Project API
 
 - API version: 1.0.0
 
-- Build date: 2022-09-21T09:00:30.331747600+02:00[Europe/Prague]
+- Build date: 2022-09-21T09:34:09.177841100+02:00[Europe/Prague]
 
 De API for testing the discriminator in openapi 6
 
@@ -93,9 +93,9 @@ public class ProjectsApiExample {
         defaultClient.setBasePath("http://localhost");
         
         ProjectsApi apiInstance = new ProjectsApi(defaultClient);
-        InfraApiProjectCreate infraApiProjectCreate = new InfraApiProjectCreate(); // InfraApiProjectCreate | 
+        CreateProjectsRequest createProjectsRequest = new CreateProjectsRequest(); // CreateProjectsRequest | 
         try {
-            apiInstance.createProjects(infraApiProjectCreate);
+            apiInstance.createProjects(createProjectsRequest);
         } catch (ApiException e) {
             System.err.println("Exception when calling ProjectsApi#createProjects");
             System.err.println("Status code: " + e.getCode());
@@ -119,9 +119,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
- - [InfraApiComplexObject](docs/InfraApiComplexObject.md)
- - [InfraApiProjectCreate](docs/InfraApiProjectCreate.md)
- - [InfraApiSimpleObject](docs/InfraApiSimpleObject.md)
+ - [Cat](docs/Cat.md)
+ - [CreateProjectsRequest](docs/CreateProjectsRequest.md)
+ - [Dog](docs/Dog.md)
+ - [Lizard](docs/Lizard.md)
 
 
 ## Documentation for Authorization

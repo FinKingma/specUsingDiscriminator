@@ -20,7 +20,6 @@ openApiGenerate {
     inputSpec = "$projectDir/spec.yaml".toString()
     outputDir = "$projectDir/generated"
     groupId = "nl.project.webclient"
-    modelNamePrefix = "InfraApi"
     modelPackage = "nl.project.webclient.model"
     apiPackage = "nl.project.webclient.api"
     configOptions = [

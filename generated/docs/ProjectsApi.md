@@ -10,7 +10,7 @@ All URIs are relative to *http://localhost*
 
 ## createProjects
 
-> createProjects(infraApiProjectCreate)
+> createProjects(createProjectsRequest)
 
 Create a project
 
@@ -30,9 +30,9 @@ public class Example {
         defaultClient.setBasePath("http://localhost");
 
         ProjectsApi apiInstance = new ProjectsApi(defaultClient);
-        InfraApiProjectCreate infraApiProjectCreate = new InfraApiProjectCreate(); // InfraApiProjectCreate | 
+        CreateProjectsRequest createProjectsRequest = new CreateProjectsRequest(); // CreateProjectsRequest | 
         try {
-            apiInstance.createProjects(infraApiProjectCreate);
+            apiInstance.createProjects(createProjectsRequest);
         } catch (ApiException e) {
             System.err.println("Exception when calling ProjectsApi#createProjects");
             System.err.println("Status code: " + e.getCode());
@@ -49,7 +49,7 @@ public class Example {
 
 | Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **infraApiProjectCreate** | [**InfraApiProjectCreate**](InfraApiProjectCreate.md)|  | |
+| **createProjectsRequest** | [**CreateProjectsRequest**](CreateProjectsRequest.md)|  | |
 
 ### Return type
 

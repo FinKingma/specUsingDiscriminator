@@ -26,41 +26,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InfraApiComplexObject
+ * Model tests for Dog
  */
-public class InfraApiComplexObjectTest {
-    private final InfraApiComplexObject model = new InfraApiComplexObject();
+public class DogTest {
+    private final Dog model = new Dog();
 
     /**
-     * Model tests for InfraApiComplexObject
+     * Model tests for Dog
      */
     @Test
-    public void testInfraApiComplexObject() {
-        // TODO: test InfraApiComplexObject
+    public void testDog() {
+        // TODO: test Dog
     }
 
     /**
-     * Test the property 'objectType'
+     * Test the property 'bark'
      */
     @Test
-    public void objectTypeTest() {
-        // TODO: test objectType
+    public void barkTest() {
+        // TODO: test bark
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'petType'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
-    }
-
-    /**
-     * Test the property 'description'
-     */
-    @Test
-    public void descriptionTest() {
-        // TODO: test description
+    public void petTypeTest() {
+        // TODO: test petType
     }
 
 }

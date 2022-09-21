@@ -13,7 +13,7 @@
 
 package nl.project.webclient.api;
 
-import nl.project.webclient.model.InfraApiProjectCreate;
+import nl.project.webclient.model.CreateProjectsRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -39,8 +39,8 @@ public class ProjectsApiTest {
      */
     @Test
     public void createProjectsTest()  {
-        InfraApiProjectCreate infraApiProjectCreate = null;
-        api.createProjects(infraApiProjectCreate).block();
+        CreateProjectsRequest createProjectsRequest = null;
+        api.createProjects(createProjectsRequest).block();
 
         // TODO: test validations
     }

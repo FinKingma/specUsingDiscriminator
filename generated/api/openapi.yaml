@@ -13,7 +13,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ProjectCreate'
+              $ref: '#/components/schemas/createProjects_request'
         required: true
       responses:
         "201":
@@ -25,30 +25,39 @@ paths:
       x-accepts: application/json
 components:
   schemas:
-    ProjectCreate:
-      discriminator:
-        propertyName: objectType
-      oneOf:
-      - $ref: '#/components/schemas/simpleObject'
-      - $ref: '#/components/schemas/complexObject'
-    simpleObject:
+    Cat:
       properties:
-        objectType:
+        catName:
           type: string
-        name:
+        petType:
           type: string
       required:
-      - objectType
+      - petType
       type: object
-    complexObject:
+    Dog:
       properties:
-        objectType:
+        bark:
           type: string
-        name:
-          type: string
-        description:
+        petType:
           type: string
       required:
-      - objectType
+      - petType
+      type: object
+    Lizard:
+      properties:
+        lovesRocks:
+          type: boolean
+        petType:
+          type: string
+      required:
+      - petType
+      type: object
+    createProjects_request:
+      discriminator:
+        propertyName: petType
+      oneOf:
+      - $ref: '#/components/schemas/Cat'
+      - $ref: '#/components/schemas/Dog'
+      - $ref: '#/components/schemas/Lizard'
       type: object
 

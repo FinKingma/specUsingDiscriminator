@@ -26,33 +26,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for InfraApiSimpleObject
+ * Model tests for Cat
  */
-public class InfraApiSimpleObjectTest {
-    private final InfraApiSimpleObject model = new InfraApiSimpleObject();
+public class CatTest {
+    private final Cat model = new Cat();
 
     /**
-     * Model tests for InfraApiSimpleObject
+     * Model tests for Cat
      */
     @Test
-    public void testInfraApiSimpleObject() {
-        // TODO: test InfraApiSimpleObject
+    public void testCat() {
+        // TODO: test Cat
     }
 
     /**
-     * Test the property 'objectType'
+     * Test the property 'catName'
      */
     @Test
-    public void objectTypeTest() {
-        // TODO: test objectType
+    public void catNameTest() {
+        // TODO: test catName
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'petType'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void petTypeTest() {
+        // TODO: test petType
     }
 
 }

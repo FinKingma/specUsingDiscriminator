@@ -2,7 +2,7 @@ package nl.project.webclient.api;
 
 import nl.project.webclient.ApiClient;
 
-import nl.project.webclient.model.InfraApiProjectCreate;
+import nl.project.webclient.model.CreateProjectsRequest;
 
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +25,7 @@ import org.springframework.http.ResponseEntity;
 import reactor.core.publisher.Mono;
 import reactor.core.publisher.Flux;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:00:30.331747600+02:00[Europe/Prague]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-09-21T09:34:09.177841100+02:00[Europe/Prague]")
 public class ProjectsApi {
     private ApiClient apiClient;
 
@@ -50,14 +50,14 @@ public class ProjectsApi {
      * Create a project
      * 
      * <p><b>201</b> - OK
-     * @param infraApiProjectCreate The infraApiProjectCreate parameter
+     * @param createProjectsRequest The createProjectsRequest parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    private ResponseSpec createProjectsRequestCreation(InfraApiProjectCreate infraApiProjectCreate) throws WebClientResponseException {
-        Object postBody = infraApiProjectCreate;
-        // verify the required parameter 'infraApiProjectCreate' is set
-        if (infraApiProjectCreate == null) {
-            throw new WebClientResponseException("Missing the required parameter 'infraApiProjectCreate' when calling createProjects", HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null, null, null);
+    private ResponseSpec createProjectsRequestCreation(CreateProjectsRequest createProjectsRequest) throws WebClientResponseException {
+        Object postBody = createProjectsRequest;
+        // verify the required parameter 'createProjectsRequest' is set
+        if (createProjectsRequest == null) {
+            throw new WebClientResponseException("Missing the required parameter 'createProjectsRequest' when calling createProjects", HttpStatus.BAD_REQUEST.value(), HttpStatus.BAD_REQUEST.getReasonPhrase(), null, null, null);
         }
         // create path and map variables
         final Map<String, Object> pathParams = new HashMap<String, Object>();
@@ -84,35 +84,35 @@ public class ProjectsApi {
      * Create a project
      * 
      * <p><b>201</b> - OK
-     * @param infraApiProjectCreate The infraApiProjectCreate parameter
+     * @param createProjectsRequest The createProjectsRequest parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<Void> createProjects(InfraApiProjectCreate infraApiProjectCreate) throws WebClientResponseException {
+    public Mono<Void> createProjects(CreateProjectsRequest createProjectsRequest) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
-        return createProjectsRequestCreation(infraApiProjectCreate).bodyToMono(localVarReturnType);
+        return createProjectsRequestCreation(createProjectsRequest).bodyToMono(localVarReturnType);
     }
 
     /**
      * Create a project
      * 
      * <p><b>201</b> - OK
-     * @param infraApiProjectCreate The infraApiProjectCreate parameter
+     * @param createProjectsRequest The createProjectsRequest parameter
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public Mono<ResponseEntity<Void>> createProjectsWithHttpInfo(InfraApiProjectCreate infraApiProjectCreate) throws WebClientResponseException {
+    public Mono<ResponseEntity<Void>> createProjectsWithHttpInfo(CreateProjectsRequest createProjectsRequest) throws WebClientResponseException {
         ParameterizedTypeReference<Void> localVarReturnType = new ParameterizedTypeReference<Void>() {};
-        return createProjectsRequestCreation(infraApiProjectCreate).toEntity(localVarReturnType);
+        return createProjectsRequestCreation(createProjectsRequest).toEntity(localVarReturnType);
     }
 
     /**
      * Create a project
      * 
      * <p><b>201</b> - OK
-     * @param infraApiProjectCreate The infraApiProjectCreate parameter
+     * @param createProjectsRequest The createProjectsRequest parameter
      * @return ResponseSpec
      * @throws WebClientResponseException if an error occurs while attempting to invoke the API
      */
-    public ResponseSpec createProjectsWithResponseSpec(InfraApiProjectCreate infraApiProjectCreate) throws WebClientResponseException {
-        return createProjectsRequestCreation(infraApiProjectCreate);
+    public ResponseSpec createProjectsWithResponseSpec(CreateProjectsRequest createProjectsRequest) throws WebClientResponseException {
+        return createProjectsRequestCreation(createProjectsRequest);
     }
 }

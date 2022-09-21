@@ -1,14 +1,14 @@
 
 
-# InfraApiSimpleObject
+# Cat
 
 
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-|**objectType** | **String** |  |  |
-|**name** | **String** |  |  [optional] |
+|**catName** | **String** |  |  [optional] |
+|**petType** | **String** |  |  |
 
 
 

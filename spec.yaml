@@ -15,36 +15,46 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/ProjectCreate'
+              type: object
+              oneOf:
+                - $ref: '#/components/schemas/Cat'
+                - $ref: '#/components/schemas/Dog'
+                - $ref: '#/components/schemas/Lizard'
+              discriminator:
+                propertyName: petType
       responses:
         201:
           description: OK
 
 components:
   schemas:
-    ProjectCreate:
-      oneOf:
-        - $ref: '#/components/schemas/simpleObject'
-        - $ref: '#/components/schemas/complexObject'
-      discriminator:
-        propertyName: objectType
-    simpleObject:
+    Cat:
       type: object
+      # all other properties specific to a `Cat`
       required:
-        - objectType
+        - petType
       properties:
-        objectType:
+        catName:
           type: string
-        name:
+        petType:
           type: string
-    complexObject:
+    Dog:
       type: object
+      # all other properties specific to a `Dog`
       required:
-        - objectType
+        - petType
       properties:
-        objectType:
+        bark:
           type: string
-        name:
+        petType:
           type: string
-        description:
+    Lizard:
+      type: object
+      # all other properties specific to a `Lizard`
+      required:
+        - petType
+      properties:
+        lovesRocks:
+          type: boolean
+        petType:
           type: string

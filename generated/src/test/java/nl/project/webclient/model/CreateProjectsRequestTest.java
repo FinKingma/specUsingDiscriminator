@@ -23,49 +23,58 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import nl.project.webclient.model.InfraApiComplexObject;
-import nl.project.webclient.model.InfraApiSimpleObject;
+import nl.project.webclient.model.Cat;
+import nl.project.webclient.model.Dog;
+import nl.project.webclient.model.Lizard;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for InfraApiProjectCreate
+ * Model tests for CreateProjectsRequest
  */
-public class InfraApiProjectCreateTest {
-    private final InfraApiProjectCreate model = new InfraApiProjectCreate();
+public class CreateProjectsRequestTest {
+    private final CreateProjectsRequest model = new CreateProjectsRequest();
 
     /**
-     * Model tests for InfraApiProjectCreate
+     * Model tests for CreateProjectsRequest
      */
     @Test
-    public void testInfraApiProjectCreate() {
-        // TODO: test InfraApiProjectCreate
+    public void testCreateProjectsRequest() {
+        // TODO: test CreateProjectsRequest
     }
 
     /**
-     * Test the property 'objectType'
+     * Test the property 'catName'
      */
     @Test
-    public void objectTypeTest() {
-        // TODO: test objectType
+    public void catNameTest() {
+        // TODO: test catName
     }
 
     /**
-     * Test the property 'name'
+     * Test the property 'petType'
      */
     @Test
-    public void nameTest() {
-        // TODO: test name
+    public void petTypeTest() {
+        // TODO: test petType
     }
 
     /**
-     * Test the property 'description'
+     * Test the property 'bark'
      */
     @Test
-    public void descriptionTest() {
-        // TODO: test description
+    public void barkTest() {
+        // TODO: test bark
+    }
+
+    /**
+     * Test the property 'lovesRocks'
+     */
+    @Test
+    public void lovesRocksTest() {
+        // TODO: test lovesRocks
     }
 
 }
