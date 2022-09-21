@@ -1,0 +1,50 @@
+openapi: "3.0.3"
+info:
+  title: MS Project API
+  version: 1.0.0
+  description: De API for testing the discriminator in openapi 6
+paths:
+  /api/projects:
+    post:
+      summary: Create a project
+      operationId: createProjects
+      tags:
+        - projects
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ProjectCreate'
+      responses:
+        201:
+          description: OK
+
+components:
+  schemas:
+    ProjectCreate:
+      oneOf:
+        - $ref: '#/components/schemas/simpleObject'
+        - $ref: '#/components/schemas/complexObject'
+      discriminator:
+        propertyName: objectType
+    simpleObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+        name:
+          type: string
+    complexObject:
+      type: object
+      required:
+        - objectType
+      properties:
+        objectType:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
